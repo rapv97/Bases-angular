@@ -1,0 +1,69 @@
+
+
+
+
+
+
+<div *ngIf="heroDelete !=='' ; else deleteHero" >
+
+  <h3 > Heroe borrado
+    <small class="text-danger"> {{ heroDelete }}
+
+    </small>
+  </h3>
+</div>
+
+<ng-template #deleteHero>
+  <h3 >
+    No hay heroes borrados
+  </h3>
+</ng-template>
+
+
+
+
+<div *ngIf="heroNames.length > 0; else noHeroes" >
+  <h3 class="mt-5">
+    Listado de Heroes
+  </h3>
+
+  <ul class="mt list-group">
+
+    <li class="list-group-item"
+        *ngFor="let name of heroNames"
+        > {{ name }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #noHeroes>
+  <h2> Actualmente no hay heroes por listar</h2>
+</ng-template>
+
+
+
+
+
+<button class="btn btn-outline-danger my-2 mt-4"
+        (click)="deleteLastHero()"
+        *ngIf="heroNames.length > 0"
+>
+  Borrar ultimo heroe
+</button>
+
+<form  *ngIf="heroNames.length === 0">
+
+ <input type="text"
+        placeholder="Ingrese nombre del hero"
+        (input)="onInputChange($event)"
+        >
+
+  <button class="btn btn-primary mx-4"
+        *ngIf="heroNames.length === 0"
+        (click)="addHero()"
+>
+  Crear Hero
+</button>
+</form>
+
+
