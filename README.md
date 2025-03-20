@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+comandos usados en git - primera vez
+
+1 git init
+2 git add . // para agregar todos los cambios.
+3 git commit -m "" para hacer el commit y agregar un comentario.
+4 git remote add origin https://github.com/rapv97/Bases-angular.git para apuntar al repositorio en el que se guardara
+5 git branch -M main // para renombrar la rama en la que se encuentra y le ponga de nombre main
+6 git push -u origin main // para enviar los cambios al repo y establecer la rama main por defecto 
+
+
+***********************************
+Segunda vez
+
+1 git add .
+2 git commit -m "Instrucciones en readme"
+3 git push 
+
+
+para recuperar a partir del ultimo cambio versionado
+
+git checkout -- .
